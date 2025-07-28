@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableau de bord – MyCAVE</title>
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+</head>
+<body class="dashboard">
+  <header class="dashboard-header">
+    <div class="header-content">
+      <img src="{{ asset('assets/img/logo-large.png') }}" alt="myCAVE logo" class="logo">
+      <div class="header-text">
+        <h1>Bienvenue dans votre cave {{ user.name }}</h1>
+        <p>Elle contient déjà <span id="bottle-count">12</span> bouteilles</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn-primary" onclick="window.location.href='index.php/add-wine'">Ajouter une nouvelle bouteille</button>
+        <button class="btn-outline" onclick="window.location.href='index.php/logout'">Déconnexion</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <div class="background-cave">
+      <img src="{{ asset('assets/img/pexels-finn-ruijter-2153149058-32906672.jpg') }}" alt="Image cave" class="cave-image">
+    </div>
+    <div class="wines-container" id="wines-container">
+      
+      <!-- Bouteille 1 -->
+      <div class="wine-card">
+        <div class="wine-image">
+          <img src="{{ asset('assets/img/generic.jpg') }}" alt="Château Margaux">
+        </div>
+        <div class="wine-info">
+          <h3>Château Margaux</h3>
+          <div class="wine-details">
+            <span class="year">2015</span>
+            <span class="grape">Cabernet Sauvignon</span>
+            <span class="region">Bordeaux, France</span>
+          </div>
+          <p class="wine-description">Un grand cru exceptionnel avec des arômes complexes de fruits noirs et d'épices...</p>
+          <div class="wine-actions">
+            <button class="btn-icon" title="Modifier"><img src="{{ asset('assets/img/pen-to-square.svg') }}" alt=""></button>
+            <button class="btn-icon" title="Supprimer"><img src="{{ asset('assets/img/trash-arrow-up.svg') }}" alt=""></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouteille 2 -->
+      <div class="wine-card">
+        <div class="wine-image">
+          <img src="{{ asset('assets/img/rex_hill.jpg') }}" alt="Domaine Romanée-Conti">
+        </div>
+        <div class="wine-info">
+          <h3>Domaine Romanée-Conti</h3>
+          <div class="wine-details">
+            <span class="year">2018</span>
+            <span class="grape">Pinot Noir</span>
+            <span class="region">Bourgogne, France</span>
+          </div>
+          <p class="wine-description">Though soft and rounded in texture, the body of this wine is full and rich and oh-so-appealing.</p>
+          <div class="wine-actions">
+            <button class="btn-icon" title="Modifier"><img src="{{ asset('assets/img/pen-to-square.svg') }}" alt=""></button>
+            <button class="btn-icon" title="Supprimer"><img src="{{ asset('assets/img/trash-arrow-up.svg') }}" alt=""></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>© 2025 MyCave - Votre cave à vin digitale</p>
+  </footer>
+</body>
+</html> 
